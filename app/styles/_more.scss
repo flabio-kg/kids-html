@@ -1,0 +1,72 @@
+.more{
+	padding-top: 30px;
+	padding-bottom: 70px;
+	.title__headline{
+		text-align: center;
+		margin: 0;
+		text-transform: none;
+		@media (max-width: $screen-xs-max){
+			text-align: center;
+			margin: 0;
+			font-size: 26px;
+		}
+	}
+	&__item{
+		position: relative;
+		margin: 50px 0 0;
+		@media (max-width: $screen-xs-max) {
+			margin-top: 25px;
+			margin-bottom: 20px;
+			position: relative;
+		}
+
+		&--icon{
+			position: absolute;
+			font-size: 35px;
+			margin-left: 45px;
+			margin-top: 25px;
+			@media (max-width: $screen-sm-min){
+				position: relative;
+				margin: 0;
+				text-align: center;	
+						}
+				.icon-people{
+					color: #79bb55;		
+					}
+				.icon-cap{
+					color: #bb85b9;
+				}
+				.icon-lamp{
+					color: #f7a233;			
+				}      
+			}
+			&--desc{
+				margin-top: 20px;
+				@media (max-width: $screen-xs-max){
+					text-align: center;
+				}
+				span{
+					font-size: 18px;
+					line-height: 19px;
+					color: #736357;
+					font-family: 'OpenSansBold';
+					padding-left: 150px;
+
+					@media (max-width: $screen-xs-max){
+						padding-left: 0;
+						font-size: 16px;
+					}
+				}
+				p{			
+					margin: 25px 0 0 150px;
+					font-size: 15px;
+					line-height: 19px;
+					color: #736357;
+					font-family: 'OpenSansRegular';	
+					@media (max-width: $screen-xs-max){
+						margin: 0;					
+					}		
+				}			
+			}
+		}
+	}

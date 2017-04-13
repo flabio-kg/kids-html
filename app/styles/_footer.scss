@@ -1,0 +1,89 @@
+.footer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	&__logo{
+		@media (max-width: $screen-sm-max) {
+			text-align: center;
+			margin-bottom: 8px;
+		}
+	}
+	&__social{
+		padding-top: 12px;
+		a{
+			display: block;
+			width: 38px;
+			height: 38px;
+			text-align: center;
+			line-height: 36px;
+			border-radius: 30em;
+			color: #fff;
+			font-size: 18px;
+			.fa{
+				transform: rotate(0deg);
+				transition: all .5s;
+			}
+			&:hover{
+				.fa{
+					transform: rotate(360deg);
+				}
+			}
+		}
+		&--ins{
+			background-color: #405de6;
+		}
+		&--gp{
+			background-color: #dd4b39;
+		}
+		&--fb{
+			background-color: #3b5998;
+		}
+		&--vk{
+			background-color: #45668e;
+		}
+		&--tw{
+			background-color: #1da1f2;
+		}
+		&--ok{
+			background-color: #ed812b;
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			text-align: center;
+			li{
+				display: inline-block;
+				margin-left: 7px;
+				margin-right: 7px;
+				@media (max-width: $screen-xs-min) {
+					margin-left: 3px;
+					margin-right: 3px;
+				}
+				&:first-child{
+					margin-left: 0;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	&__contacts{
+		text-align: right;
+		font-size: 18px;
+		padding-top: 7px;
+		@media (max-width: $screen-sm-max) {
+			text-align: center;
+			margin-top: 20px;
+		}	
+		a{
+			display: block;
+			color: #4f4f4f;
+			text-decoration: none;
+			transition: all .3s;
+			&:hover{
+				color: #79bb55;
+			}
+		}
+	}
+}

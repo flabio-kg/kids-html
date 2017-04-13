@@ -1,0 +1,321 @@
+.preloader{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 10000000;
+}
+.header{
+	// min-height: 750px;
+	&__topbar{
+		position: fixed;
+		background-color: #fff;
+		border-bottom: 1px #D0D0D0 solid;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		z-index: 100000;
+		width: 100%;
+		transition: all .3s;
+	}
+	&__wrap{
+		position: relative;
+		&--logo{
+			
+		}
+		&--contact{
+			padding-left: 20px;
+			// padding-top: 5px;
+			text-align: center;
+			@media (max-width: $screen-md-max) {
+				display: none;
+			}
+			a{
+				text-align: left;
+				display: block;
+				font-size: 18px;
+				color: #4f4f4f;
+				font-family: 'ProstoOne';
+				text-decoration: none;
+				transition: all .3s;
+				@media (max-width: $screen-md-max) {
+					text-align: center;
+					display: inline-block;
+					padding-right: 20px;
+					&:last-child{
+						padding-right: 0;
+					}
+				}
+				@media (max-width: $screen-xs-max) {
+					font-size: 14px;
+				}
+				@media (max-width: $screen-xs-min) {
+					font-size: 13px;
+					padding-right: 10px;
+					&:last-child{
+						padding-right: 0;
+					}
+				}
+				&:hover{
+					color: #79bb55;
+				}
+				i{
+					padding-right: 13px;
+					@media (max-width: $screen-xs-min) {
+						display: none;
+					}
+				}
+				.icon-phone{
+					color: #A768A4;
+					font-size: 22px;
+					font-family: 'BigBossIcon';
+				}
+				.icon-messege{
+					color: #6EB452;
+					font-size: 15px;
+					font-family: 'BigBossIcon';
+					padding-right: 22px;
+				}
+			}
+		}
+		&--menu{
+			ul{
+				padding-left: 0;
+				margin: 0;
+				display: block;
+				text-align: right;
+				@media (max-width: $screen-sm-max) {
+					display: none;
+				}
+				li{
+					list-style-type: none;
+					display: inline-block;
+					margin-right: 40px;
+					position: relative;					
+					&:last-child{
+						margin-right: 0;
+						ul{
+							left: auto;
+							right: 0;
+						}
+					}
+					ul{
+						visibility: hidden;
+						position: absolute;
+						opacity: 0;
+						background-color: #fff;
+						top: 200%;
+						min-width: 180px;
+						text-align: left;
+						padding: 15px;
+						border: 1px #D0D0D0 solid;
+						border-top: 3px #FBA91E solid;
+						margin-top: 2px;
+						left: 0;
+						z-index: 1555;
+						transition: all .3s;
+						padding-top: 10px;
+						li{
+							margin: 0;
+							display: block;
+							a{
+								padding-top: 0;
+								line-height: 1.5;
+								text-transform: none;
+								border-bottom: none;
+								&:hover{
+									border-bottom: none;
+								}
+							}
+						}
+					}
+					&:hover{
+						ul{
+							visibility: visible;
+							opacity: 1;
+							top: 100%;
+						}
+					}
+					a{
+						font-size: 14px;
+						color: #4f4f4f;
+						font-family: 'DaysOne';
+						line-height: 65px;
+						transition: all .3s;
+						text-decoration: none;
+						text-transform: uppercase;
+						border-bottom: 3px transparent solid;
+						padding: 26px 0;
+						&:hover{
+							color: #79bb55;
+							border-bottom: 3px #FBA91E solid;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__blog{
+		text-align: center;
+		padding-top: 129px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			background-image: url('../images/left_img.png');
+			background-position: left top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			max-width: 270px;
+			width: 100%;
+			height: 315px;
+			left: 0;
+			top: 20%;
+			@media (max-width: $screen-sm-min) {
+				display: none;
+			}
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			background-image: url('../images/right_img.png');
+			background-position: left top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			max-width: 175px;
+			width: 100%;
+			height: 332px;
+			right: 0;
+			top: 20%;
+			@media (max-width: $screen-sm-min) {
+				display: none;
+			}
+		}
+		h3{
+			margin: 0;
+			padding-bottom: 4px;
+
+		}
+		h4{
+			margin: 0;
+		}
+		.title__headline{
+			font-size: 55px;
+			@media (max-width: $screen-xs-max) {
+				font-size: 40px;
+			}
+			@media (max-width: $screen-xs-min) {
+				font-size: 30px;
+			}
+		}
+		&--item{
+			padding-top: 56px;
+			position: relative;
+			p{
+				font-size: 17px;
+				color: #4f4f4f;
+				font-weight: 400;
+				text-decoration: underline;
+				padding-bottom: 30px;
+			}
+			img{
+				position: absolute;
+				top: 28%;
+				left: 30%;
+				@media (max-width: $screen-md-max) {
+					left: 26%;
+				}
+				@media (max-width: $screen-sm-max) {
+					left: 18%;
+				}
+				@media (max-width: $screen-sm-min) {
+					display: none;
+				}
+			}
+			form{
+				display: inline-block;
+				input{
+					line-height: 60px;
+					display: block;
+					@media (max-width: $screen-xs-min) {
+						// width: 260px;
+					}
+				}
+				.-btn{
+					margin-top: 15px;
+					width: 290px;
+					line-height: 60px;
+					@media (max-width: $screen-xs-min) {
+						width: 260px;
+					}
+				}
+			}
+		}
+		&--item2{
+			padding-top: 75px;
+			img{
+				max-width: 690px;
+				width: 100%;
+			}
+		}
+	}
+	&__navtrigger {
+		cursor: pointer;
+		width: 30px;
+		height: 25px;
+		position: relative;
+		margin-top: 0px;
+		margin-right: 0px;
+		position: absolute;
+		display: none;
+		font-size: 35px;
+		color: #78BB56;
+		right: 15px;
+		top: 20px;
+		cursor: pointer;
+		z-index: 1000000000;
+		@media (max-width: $screen-sm-max) {
+			display: block;
+		}
+		i {
+			background-color: #78BB56;
+			border-radius: 2px;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 4px;
+		}
+		i:nth-child(1) {
+			-webkit-animation: outT 0.8s backwards;
+			animation: outT 0.8s backwards;
+			-webkit-animation-direction: reverse;
+			animation-direction: reverse;
+		}
+		i:nth-child(2) {
+			margin: 5px 0;
+			-webkit-animation: outM 0.8s backwards;
+			animation: outM 0.8s backwards;
+			-webkit-animation-direction: reverse;
+			animation-direction: reverse;
+		}
+		i:nth-child(3) {
+			-webkit-animation: outBtm 0.8s backwards;
+			animation: outBtm 0.8s backwards;
+			-webkit-animation-direction: reverse;
+			animation-direction: reverse;
+		}
+		&.-active i:nth-child(1) {
+			-webkit-animation: inT 0.8s forwards;
+			animation: inT 0.8s forwards;
+		}
+		&.-active i:nth-child(2) {
+			-webkit-animation: inM 0.8s forwards;
+			animation: inM 0.8s forwards;
+		}
+		&.-active i:nth-child(3) {
+			-webkit-animation: inBtm 0.8s forwards;
+			animation: inBtm 0.8s forwards;
+		}
+	}
+}

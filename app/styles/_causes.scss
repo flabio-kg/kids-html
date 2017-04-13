@@ -1,0 +1,70 @@
+.causes{
+	padding-top: 15px;
+	padding-bottom: 40px;
+	background-color: #FFFAF6;
+	.title{
+		margin-bottom: 20px;
+	}
+	&__blog{
+		text-align: center;
+		&--icon{
+			display: block;
+			margin: 0 auto;
+			background-color: #6FB452;
+			border-radius: 10em;
+			width: 80px;
+			height: 80px;
+			margin-bottom: 10px;
+			@media (max-width: $screen-sm-max) {
+				margin-bottom: 20px;
+			}
+			i{
+				font-size: 50px;
+				color: #fff;
+				line-height: 77px;
+			}
+			.icon-mark{
+				margin-left: -12px;
+			}
+			.icon-tea{
+				margin-right: -8px;
+			}
+			.icon-pic{
+				font-size: 48px;
+			}
+			.icon-clock{
+				margin-right: -1px;
+			}
+		}
+		.-purple{
+			background-color: #A768A4;
+		}
+		.-orange{
+			background-color: #F29935;
+		}
+		&--item{			
+			h4{
+				font-size: 16px;
+				color: #736357;
+				font-family: 'OpenSansBold';
+				margin-top: 15px;
+				text-transform: uppercase;
+				height: 66px;
+				margin-bottom: 0;
+				overflow: hidden;
+			}
+			p{
+				font-size: 14px;
+				color: #736357;
+				font-family: 'OpenSansRegular';
+				padding-top: 25px;
+				height: 100px;
+				margin-bottom: 0;
+				overflow: hidden;
+				@media (max-width: $screen-sm-max) {
+					padding-top: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+.botform{
+	background-image: url('../images/img/abc2-u2925-fr.png');
+	padding-top: 45px;
+	padding-bottom: 45px;
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-color: #f7e5cb;
+	.-forms{
+		margin-top: 40px;
+	}
+	.-btn{
+		display: block;
+		width: 100%;
+		margin-top: 55px;
+		@media (max-width: $screen-sm-max) {
+			margin-top: 20px;
+		}
+	}
+	&__form{
+		max-width: 700px;
+		margin: 0 auto;
+		border-radius: 20px;
+		background-color: rgba(#fff,.5);
+		border: 2px solid #f7c786;
+		padding: 30px 40px;
+		@media (max-width: $screen-xs-min) {
+			padding: 15px;
+		}		
+		&--title{
+			margin: 0;
+			font-weight: bold;
+			color: #0071bc;
+			font-size: 36px;
+			text-transform: uppercase;
+			@media (max-width: $screen-xs-max) {
+				text-align: center;
+			}	
+			@media (max-width: $screen-xs-min) {
+				font-size: 25px;
+			}	
+		}
+		&--subtitle{
+			color: #404040;
+			font-size: 24px;
+			margin: 0;
+			@media (max-width: $screen-xs-max) {
+				text-align: center;
+			}
+			@media (max-width: $screen-xs-min) {
+				font-size: 15px;
+			}	
+			span{
+				font-weight: bold;
+				color: #0071bc;
+				@media (max-width: $screen-xs-min) {
+					display: block;
+				}	
+			}
+		}
+		&--input{
+			margin-bottom: 15px;
+			label{
+				color: #404040;
+				font-weight: normal;
+				font-size: 18px;
+				display: block;
+			}
+		}
+	}
+}
