@@ -14,34 +14,6 @@ $(document).ready(function() {
 
 	$('.header__wrap--menu ul').clone().appendTo('.mmenu-nav');
 
-  if (Modernizr.mq('(max-width: 992px)')) {
-		$('a.-pagescroll[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top-115
-        }, 1000);
-        return false;
-      }
-    }
-  });
-	} else {
-		$('a.-pagescroll[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top-73
-        }, 1000);
-        return false;
-      }
-    }
-  });
-	}
-
 	var $menu = $('.mmenu-nav').mmenu({
 		navbar: {
 			title: '<img src=\'images/logo.png\' alt=\'\' />'
@@ -73,6 +45,37 @@ $(document).ready(function() {
 	API.bind( 'close:start', function( $panel ) {
 		$('.js-navtrigger').toggleClass('-active');
 	});
+
+  if (Modernizr.mq('(max-width: 992px)')) {
+		$('a.-pagescroll[href*="#"]:not([href="#"])').click(function() {
+			API.close();
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top-115
+        }, 1000);
+        return false;
+      }
+    }
+  });
+	} else {
+		$('a.-pagescroll[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top-73
+        }, 1000);
+        return false;
+      }
+    }
+  });
+	}
+
+
 
 
 	
